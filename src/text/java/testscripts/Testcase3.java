@@ -35,10 +35,11 @@ import pomPages.coreJavaForselenium;
 	
 	//switching back to video frame
 	driverutilies.switchbackFrame(driver);
+	/*
 	Thread.sleep(20000);
 
 	t.facebookbutton();
-	/*
+
 	Thread.sleep(20000);
 
 	
