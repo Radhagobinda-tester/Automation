@@ -1,6 +1,7 @@
 package testscripts;
 
-   import org.testng.annotations.Test;
+   import org.testng.Reporter;
+import org.testng.annotations.Test;
 
 import genericLib.BaseClass;
 import pomPages.AddtocartPage;
@@ -25,6 +26,9 @@ import pomPages.skillraryDemoApp;
 	driverutilies.doubleClick(driver, ad.getAdd());
 	ad.addtocartbutton();
 	driverutilies.alertPopup(driver);
+	// execute all test case and generate report
+	
+		Reporter.log(driver.getTitle(),true);
 	
 	}
 	

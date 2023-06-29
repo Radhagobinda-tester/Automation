@@ -15,7 +15,9 @@ public class skillraryDemoApp {
 	
 	private WebElement seleniumTraining;
 	
-	//Intialization
+	@FindBy(name="addresstype")
+	private WebElement coursedd;
+	
 	
 	
 	
@@ -32,7 +34,12 @@ public class skillraryDemoApp {
 	public void seleniumTrainingTab() {
 		seleniumTraining.click();
 	}
+
+	public WebElement getCoursedd() {
+		return coursedd;
+	}
 	
-  }
+	}
+
 	
 	
