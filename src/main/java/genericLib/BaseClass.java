@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -32,14 +33,23 @@ public class BaseClass {
 	
 	
 	
+
+	 
 	@AfterMethod
 	 
-	public void CloseApp() {
+	public void CloseApp(ITestResult result) throws IOException {
+		
+	int status = result.getStatus();
+	String name = result.getName();
+	if(status==2) {
+		
+	  Screenshot s = new Screenshot();
+	  s.getPhoto(driver, name);
+	}
+	
 		
 	driver.quit();
 	
 	}
-	
-	
 
 }

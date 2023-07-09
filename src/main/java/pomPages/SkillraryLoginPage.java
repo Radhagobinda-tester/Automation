@@ -11,11 +11,9 @@ public class SkillraryLoginPage {
 	private WebElement gearBtn;
 	
 	@FindBy(xpath="(//a[text()=' SkillRary Demo APP'])[2]")
-	
 	private WebElement demoApp;
 	
 	@FindBy(name="q")
-	
 	private WebElement Searchtb;
 	
 	@FindBy(xpath="//input[@value='go']")
